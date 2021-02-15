@@ -27,8 +27,8 @@ weatherForm.addEventListener('submit', (e) => {
                 return message1.textContent = 'There is an error'
             }
             message1.textContent = 'Weather in ' + weather.address + ' (' + weather.location + ')'
-            message2.textContent = weather.weather.weather + '. Feels like: ' + weather.weather.feelslike + '\nTemperature: ' + weather.weather.temp + '\nLocation: ' + weather.weather.location.name + ', ' + weather.weather.location.country + ' Observation Time: ' + weather.weather.observation_time
-            console.log(weather.weather)
+            message2.textContent = weather.weather.current + weather.weather.observation_time
+            // console.log(message2.textContent)
         })
     })
 })

@@ -16,10 +16,8 @@ const forecast = (long, lat, callback) => {
                     name: body.location.name,
                     country: body.location.country
                 },
-                weather: body.current.weather_descriptions,
-                temp: body.current.temperature,
-                feelslike: body.current.feelslike,
-                observation_time: body.current.observation_time,
+                current: body.current.weather_descriptions + '. It is currently ' + body.current.temperature + ' degree C out.\nFeels like ' + body.current.feelslike + ' degree C.',
+                observation_time: '\nObservation Time: ' + body.current.observation_time
             })
         }
     })
